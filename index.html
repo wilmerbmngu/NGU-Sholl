@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Never Give Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: green;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2e7d32;
+}
+
+.btn-group button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  border: 2px solid #2e7d32;
+}
+
+.btn-primary {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2e7d32;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.hero-image img {
+  width: 220px;
+  max-width: 90%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content:center;}
+}
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.hero .btn-group {
+  margin-top: 2rem;
+}
+
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+footer {
+  padding: 2rem;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+body.dark footer {
+  background: #000;
+}
+
+.testimonios {
+  background: #fafafa;
+  padding: 2rem;
+}
+
+body.dark .testimonios {
+  background: #1c1c1c;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  body.dark nav {
+    background: #1c1c1c;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+/* Quita subrayado por defecto */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botón base */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #22c55e;
+  color: white;
+}
+
+/* Botón secundario con borde */
+.btn-secondary {
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  background: transparent;
+}
+
+.btn-primary:hover {
+  background-color: #16a34a;
+}
+
+.btn-secondary:hover {
+  background-color: #22c55e;
+  color: white;
+}
+  </style>
+</head><body>
+  <header>
+    <div class="logo">Never Give Up</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#metodo">Método</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <div class="btn-group">
+      <button class="btn-primary">Empieza Gratis</button>
+      <button class="btn-outline" onclick="toggleModo()" id="modo-btn"><i class="fas fa-sun"></i> Modo claro</button>
+    </div>
+    <!-- Encabezado con imagen decorativa -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Aprende inglés de forma fluida y natural</h1>
+      <p>Con nuestro método práctico y dinámico, hablarás inglés sin miedo ni dudas. ¡Es tu momento!</p>
+      <div class="buttons">
+        <a href="#" class="btn btn-primary">Empieza Gratis</a>
+        <a href="#" class="btn btn-secondary">Ver cómo funciona</a>
+      </div>
+    </div>
+    
+    <!-- Imagen decorativa -->
+    <div class="hero-image">
+      <img src="img/profesor-rata.png" alt="Ratón profesor motivador">
+    </div>
+  </div>
+</section>
+  </header>  <section class="hero" id="inicio">
+  </section>  <section class="section" id="metodo">
+    <h2>¿Cómo funciona?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>📚 Mini-lecciones</h3>
+        <p>Aprende con lecciones diarias y ejercicios prácticos.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 Práctica</h3>
+        <p>Te enseñamos a pronunciar bien las palabras.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Progreso claro</h3>
+        <p>Mide tu nivel y mejora semana a semana.</p>
+      </div>
+    </div>
+  </section>  <section class="section testimonios" id="testimonios">
+    <h2>Lo que dicen nuestros estudiantes</h2>
+    <div class="cards">
+      <div class="card">
+        <p><strong>Ana. B:</strong> "Esta bien👍."</p>
+      </div>
+      <div class="card">
+        <p><strong>Diego:</strong> "me gusta Mari."</p>
+      </div>
+      <div class="card">
+        <p><strong>Sumi:</strong> "aprender ingles es beneficioso."</p>
+      </div>
+    </div>
+  </section>  <footer>
+    <p>© 2025 Never Give Up. Todos los derechos reservados. | <a href="#" style="color:#4fc3f7; text-decoration: underline;">Política de privacidad</a></p>
+  </footer>  <script>
+    function toggleModo() {
+      document.body.classList.toggle('dark');
+      const btn = document.getElementById('modo-btn');
+      if (document.body.classList.contains('dark')) {
+        btn.innerHTML = '<i class="fas fa-moon"></i> Modo oscuro';
+      } else {
+        btn.innerHTML = '<i class="fas fa-sun"></i> Modo claro';
+      }
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+  </script></body></html>
