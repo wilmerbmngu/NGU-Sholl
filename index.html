@@ -30,7 +30,11 @@ header {
   padding: 1rem 2rem;
   flex-wrap: wrap;
 }
-
+@media (min-width: 1600px) {
+  .contenedor {
+    max-width: 1400px;
+    padding:3rem;}
+}
 .logo {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -38,7 +42,7 @@ header {
   color: green;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap:0.5rem;
 }
 
 .menu-toggle {
@@ -267,7 +271,7 @@ a {
 
 .btn-secondary:hover {
   background-color: #22c55e;
-  color: white;
+ color:white;
 }
   </style>
 </head><body>
