@@ -1,4 +1,14 @@
 <!DOCTYPE html><html lang="es"><head>
+  <section class="hero">
+  <div class="contenedor">
+    <div class="texto">
+      <h1></Never-Give-Up-Scholl></h1>
+    </div>
+    <div class="imagen">
+      <img src="prosor-raton.jpg" alt="prosor-raton">
+    </div>
+  </div>
+</section>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Never Give Up</title>
@@ -109,7 +119,25 @@ nav a:hover {
   gap: 1.5rem;
   padding: 2rem;
 }
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding:2rem;
+}
+@media (min-width: 1024px) {
+  .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4rem;
+  }
 
+  .texto, .imagen {
+    width:48%;
+}
+}
 .hero-image img {
   width: 220px;
   max-width: 90%;
