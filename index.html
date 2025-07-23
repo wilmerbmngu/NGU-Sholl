@@ -273,6 +273,26 @@ a {
   background-color: #22c55e;
  color:white;
 }
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4rem;
+  }
+
+  .texto, .imagen {
+    width:48%;
+}
+}
   </style>
 </head><body>
   <header>
