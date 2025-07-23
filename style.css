@@ -1,0 +1,567 @@
+/* Quita subrayado por defecto */
+a {
+  text-decoration: none;
+  color: inherit; /* Mantiene el color del padre si no hay uno específico */
+}
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+body {
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* ESTILOS PARA EL MODO OSCURO */
+body.dark {
+    background-color: #131313; /* Fondo OSCURO cuando tiene la clase 'dark' */
+    color: white;
+}
+body.dark header {
+    background-color: #131313; 
+    color: white; 
+}
+body.dark footer {
+    background-color: #131313;
+    color: white;
+}
+body.dark .section.testimonios { /* Asegúrate de que el selector coincida con tu HTML */
+    background-color: #131313; /* O un tono que combine con tu nuevo fondo oscuro */
+    color: white; /* Texto blanco en modo oscuro */
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    background-color: #f0f0f0; 
+    color: #333; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (min-width: 1600px) {
+  .contenedor {
+    max-width: 1400px;
+    padding:3rem;}
+}
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: green;
+  display: flex;
+  align-items: center;
+  gap:0.5rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2e7d32;
+}
+
+/* Estilos para los botones dentro del header .btn-group */
+header .btn-group .btn {
+    margin-left: 0.5rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.btn-primary {
+  background: #22c55e;
+  color: #fff;
+}
+.btn-secondary {
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #6eeb1b;
+  color: white;
+}
+
+.btn-secondary:active {
+  background-color: transparent;
+  color: #22c55e;
+  border-color:#22c55e;
+}
+
+.btn-outline {
+  background: transparent;
+  color: gold;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column; /* por defecto, columnas (móvil) */
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem; /* Añadir padding para que el contenido no toque los bordes */
+}
+
+/* Texto dentro del contenedor */
+.hero-text {
+  padding-bottom: 20px; /* Espacio entre el texto y la imagen en móvil */
+}
+
+.hero-text h1 {
+  font-size: 2rem; /* Puedes ajustar el tamaño si quieres */
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Imagen dentro del contenedor */
+.hero-image {
+  display: flex; /* Para centrar la imagen dentro de su contenedor */
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Evita que la imagen se "achique" demasiado */
+}
+
+.hero-image img {
+  max-width: 100%; /* La imagen no será más ancha que su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  width: 300px; /* Tamaño por defecto para pantallas pequeñas */
+  display: block;
+  /* margin: 20px auto;  No necesario si flexbox lo maneja */
+}
+
+/* Pantallas más grandes: layout en fila */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row; /* En pantallas grandes, se alinean en fila */
+    justify-content: space-between;
+    text-align: left;
+    padding: 4rem 2rem; /* Más padding en pantallas grandes */
+  }
+
+  .hero-text {
+    flex: 1; /* El texto ocupa el espacio restante */
+    padding-right: 40px; /* Espacio entre el texto y la imagen */
+    padding-bottom: 0; /* Quitar padding inferior en desktop */
+  }
+
+  .hero-image {
+    flex: 1; /* La imagen también ocupa espacio */
+    justify-content: flex-end; /* Alinea la imagen a la derecha del contenedor */
+  }
+
+  .hero-image img {
+    width: 100%; /* La imagen ocupa el 100% de su contenedor flex-item */
+    max-width: 450px; /* Define un tamaño máximo para que no sea GIGANTE en pantallas muy grandes */
+    /* margin: 0; No necesario */
+  }
+}
+
+/* Animación de hover para la imagen (opcional) */
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Estilo para los botones dentro de hero-text */
+.hero-text .btn-group {
+  margin-top: 1.5rem; /* Espacio entre el párrafo y los botones */
+  display: flex; /* Para que los botones se alineen en fila */
+  justify-content: center; /* Centrar botones en móvil */
+  gap: 1rem; /* Espacio entre los botones */
+}
+
+@media (min-width: 768px) {
+  .hero-text .btn-group {
+    justify-content: flex-start; /* Alinear botones a la izquierda en desktop */
+  }
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+/* Para pantallas grandes */
+@media (min-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem; /* O 3.5rem, lo que consideres adecuado */
+  }
+  .hero-text p {
+    font-size: 1.15rem; /* Ligeramente más grande para desktop */
+  }
+  /* Asegúrate que el padding del hero-content sea el adecuado para el texto */
+  .hero-content {
+    padding: 6rem 0; /* Más espacio vertical dentro del hero section, si es necesario */
+  }
+}
+}
+.hero p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.hero .btn-group {
+  margin-top: 2rem;
+}
+
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .card {
+  background: #1c1c1c;
+}
+
+footer {
+    background-color: white;
+    color: #333;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section.testimonios {
+    background-color: white; 
+    color: #333;
+    padding: 3rem 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .section.testimonios {
+    background-color: #131313;
+    color: white;
+}
+
+body.dark footer {
+    background-color: #131313;
+    color: white;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  body.dark nav {
+    background: #1c1c1c;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+/* Quita subrayado por defecto */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botón base */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Añadir un borde genérico aquí para que todas las clases btn lo hereden o lo sobrescriban */
+  border: 2px solid transparent; /* Transparente para que no se vea por defecto, pero reserve el espacio */
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #22c55e;
+  color: white;
+  border: 2px solid #22c55e; /* Aseguramos el borde para el primary */
+  text-decoration: none; /* Asegurar que no tenga subrayado si es un <a> */
+}
+
+/* Botón secundario con borde */
+.btn-secondary {
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  background: transparent;
+  text-decoration: none; /* Asegurar que no tenga subrayado si es un <a> */
+}
+
+.btn-primary:hover {
+  background-color: #16a34a;
+  border-color: #16a34a; /* También cambiar el color del borde en hover */
+}
+
+.btn-secondary:hover {
+  background-color: #22c55e;
+  color: white;
+  border-color: #22c55e; /* Asegurar que el borde cambie en hover */
+}
+
+/* Regla para los botones del header específicamente */
+header .btn-group button,
+header .btn-group a.btn-primary, /* Añadimos esta para apuntar al enlace en el header */
+header .btn-group a.btn-outline { /* Y esta para el modo claro/oscuro */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    /* Aseguramos que los bordes aquí se sobrescriban correctamente */
+    border: 2px solid; /* Esto hereda el color del borde de primary/outline */
+}
+.btn-outline {
+    background: transparent;
+    color: #22c55e; 
+    border: 2px solid #22c55e;
+    text-decoration: none;
+}
+.btn-outline:hover {
+    background-color: #0ada26;
+    color: white;
+    border-color: #0ada26;
+}
+.btn-outline i.fas.fa-sun {
+    color: gold; 
+}
+body.dark .btn-outline i.fas.fa-moon {
+    color: white;
+}
+body.dark .btn-outline {
+    color: white;
+    border-color: white; 
+}
+.btn-outline:hover i.fas.fa-sun {
+    color: white; 
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4rem;
+  }
+
+  .texto, .imagen {
+    width:48%;
+}
+}
+.btn-outline:hover {
+  background-color: #0ada26;
+  color: white;
+}
+.main-container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+@media (min-width: 1200px) {
+  .main-container {
+    padding: 0; 
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-text {
+    flex: 1;
+    padding-right: 40px;
+  }
+
+  .hero-image {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+/* Estilos para la sección de Niveles */
+.niveles-page-content {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.niveles-page-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.niveles-page-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor-niveles {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos salten de línea en pantallas pequeñas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los recuadros */
+    max-width: 900px; /* Limita el ancho del contenedor de los niveles */
+    margin: 0 auto; /* Centra el contenedor de los niveles */
+}
+
+.contenedor-niveles a {
+    display: block; /* Para que el enlace ocupe todo el espacio de la imagen */
+    max-width: 250px; /* Ajusta el tamaño máximo de cada recuadro/imagen */
+    width: 100%; /* Permite que el recuadro se adapte a pantallas más pequeñas */
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.contenedor-niveles a:hover {
+    transform: translateY(-5px); /* Pequeño efecto de "elevación" al pasar el mouse */
+}
+
+.contenedor-niveles img {
+    max-width: 100%; /* La imagen no se desborda de su enlace/contenedor */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border-radius: 12px; /* Si las imágenes no tienen bordes, esto las redondearía */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para que parezcan "tarjetas" */
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 768px) {
+    .niveles-page-content h1 {
+        font-size: 3.5rem;
+    }
+    .niveles-page-content p {
+        font-size: 1.25rem;
+    }
+}
+/* Estilos para la sección de Niveles */
+.niveles-page-content {
+    text-align: center;
+    padding: 3rem 1rem; /* Padding general de la sección */
+}
+
+.niveles-page-content h1 {
+    font-size: 2.5rem; /* Ajusta el tamaño del título principal de la página */
+    margin-bottom: 1rem;
+}
+
+.niveles-page-content p {
+    font-size: 1.1rem; /* Ajusta el tamaño del párrafo */
+    margin-bottom: 2rem;
+}
+
+.contenedor-niveles {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos salten de línea en pantallas pequeñas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los recuadros */
+    max-width: 900px; /* Limita el ancho del contenedor de los niveles */
+    margin: 0 auto; /* Centra el contenedor de los niveles en pantallas grandes */
+}
+
+.contenedor-niveles a {
+    display: block; /* Para que el enlace ocupe todo el espacio de la imagen */
+    max-width: 250px; /* Ajusta el tamaño máximo de cada recuadro/imagen */
+    width: 100%; /* Permite que el recuadro se adapte a pantallas más pequeñas */
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+    text-decoration: none; /* Asegura que los enlaces no estén subrayados */
+    color: inherit; /* Hereda el color del texto si hay alguno en la imagen */
+}
+
+.contenedor-niveles a:hover {
+    transform: translateY(-5px); /* Pequeño efecto de "elevación" al pasar el mouse */
+}
+
+.contenedor-niveles img {
+    max-width: 100%; /* La imagen no se desborda de su enlace/contenedor */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border-radius: 12px; /* Si las imágenes no tienen bordes, esto las redondearía */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para que parezcan "tarjetas" */
+}
+
+/* Ajustes para pantallas más grandes (opcional, para hacer el texto más grande) */
+@media (min-width: 768px) {
+    .niveles-page-content h1 {
+        font-size: 3.5rem; /* Título más grande en desktop */
+    }
+    .niveles-page-content p {
+        font-size: 1.25rem; /* Párrafo más grande en desktop */
+    }
+}
