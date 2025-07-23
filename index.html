@@ -101,43 +101,98 @@ nav a:hover {
   background: transparent;
   color: #2e7d32;
 }
+/* Contenedor principal con flex en pantallas grandes */
+/* Contenedor principal con flex en pantallas grandes */
 .hero-content {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column; /* por defecto, columnas (móvil) */
   align-items: center;
   text-align: center;
-  gap: 1.5rem;
-  padding: 2rem;
+  padding: 2rem 1rem; /* Añadir padding para que el contenido no toque los bordes */
+}
+
+/* Texto dentro del contenedor */
+.hero-text {
+  padding-bottom: 20px; /* Espacio entre el texto y la imagen en móvil */
+}
+
+.hero-text h1 {
+  font-size: 2rem; /* Puedes ajustar el tamaño si quieres */
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Imagen dentro del contenedor */
+.hero-image {
+  display: flex; /* Para centrar la imagen dentro de su contenedor */
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Evita que la imagen se "achique" demasiado */
 }
 
 .hero-image img {
-  width: 220px;
-  max-width: 90%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  max-width: 100%; /* La imagen no será más ancha que su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  width: 300px; /* Tamaño por defecto para pantallas pequeñas */
+  display: block;
+  /* margin: 20px auto;  No necesario si flexbox lo maneja */
 }
 
+/* Pantallas más grandes: layout en fila */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row; /* En pantallas grandes, se alinean en fila */
+    justify-content: space-between;
+    text-align: left;
+    padding: 4rem 2rem; /* Más padding en pantallas grandes */
+  }
+
+  .hero-text {
+    flex: 1; /* El texto ocupa el espacio restante */
+    padding-right: 40px; /* Espacio entre el texto y la imagen */
+    padding-bottom: 0; /* Quitar padding inferior en desktop */
+  }
+
+  .hero-image {
+    flex: 1; /* La imagen también ocupa espacio */
+    justify-content: flex-end; /* Alinea la imagen a la derecha del contenedor */
+  }
+
+  .hero-image img {
+    width: 100%; /* La imagen ocupa el 100% de su contenedor flex-item */
+    max-width: 450px; /* Define un tamaño máximo para que no sea GIGANTE en pantallas muy grandes */
+    /* margin: 0; No necesario */
+  }
+}
+
+/* Animación de hover para la imagen (opcional) */
 .hero-image img:hover {
   transform: scale(1.03);
 }
 
-@media (min-width: 768px) {
-  .hero-content {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .hero-text {
-    flex: 1;
-  }
-
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content:center;}
+/* Estilo para los botones dentro de hero-text */
+.hero-text .btn-group {
+  margin-top: 1.5rem; /* Espacio entre el párrafo y los botones */
+  display: flex; /* Para que los botones se alineen en fila */
+  justify-content: center; /* Centrar botones en móvil */
+  gap: 1rem; /* Espacio entre los botones */
 }
+
+@media (min-width: 768px) {
+  .hero-text .btn-group {
+    justify-content: flex-start; /* Alinear botones a la izquierda en desktop */
+  }
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+}
+
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -294,46 +349,46 @@ a {
 }
 }
   </style>
-</head><body>
+</head>
+<body>
   <header>
-    <div class="logo">Never Give Up</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-    <nav id="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#metodo">Método</a>
-      <a href="#blog">Blog</a>
-    </nav>
-    <div class="btn-group">
-      <button class="btn-primary">Empieza Gratis</button>
-      <button class="btn-outline" onclick="toggleModo()" id="modo-btn"><i class="fas fa-sun"></i> Modo claro</button>
-    </div>
-    <!-- Encabezado con imagen decorativa -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Aprende inglés de forma fluida y natural</h1>
-      <p>Con nuestro método práctico y dinámico, hablarás inglés sin miedo ni dudas. ¡Es tu momento!</p>
-      <div class="buttons">
-         <div class="image">
-      <img src="prosor-raton.jpg" alt="prosor-rata">
-    </div>
-        <a href="#" class="btn btn-primary">Empieza Gratis</a>
-        <a href="#" class="btn btn-secondary">Ver cómo funciona</a>
+     <div class="logo">Never Give Up</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
       </div>
-    </div>
-  </div>
-    <!-- Imagen decorativa -->
-    <div class="hero-image">
-    <img src="prosor-raton.jpg" alt="prosor-rata" />
-    </div>
-  </div>
-</section>
-  </header>  <section class="hero" id="inicio">
-  </section>  <section class="section" id="metodo">
-    <h2>¿Cómo funciona?</h2>
+      <nav id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#metodo">Método</a>
+        <a href="#blog">Blog</a>
+      </nav>
+      <div class="btn-group">
+        <button class="btn-primary">Empieza Gratis</button>
+        <button class="btn-outline" onclick="toggleModo()" id="modo-btn">
+          <i class="fas fa-sun"></i> Modo claro
+        </button>
+      </div>
+    </header>
+
+    <section class="hero-content">
+      <div class="hero-text">
+        <h1>Aprende inglés de forma fluida y natural</h1>
+        <p>
+          Con nuestro método práctico y dinámico, hablarás inglés sin miedo ni
+          dudas. ¡Es tu momento!
+        </p>
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary">Empieza Gratis</a>
+          <a href="#" class="btn btn-secondary">Ver cómo funciona</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="imagenes/prosor-raton.jpg" alt="prosor-rata" />
+      </div>
+    </section>
+
+    <section class="section" id="metodo">
+      <h2>¿Cómo funciona?</h2>
     <div class="cards">
       <div class="card">
         <h3>📚 Mini-lecciones</h3>
