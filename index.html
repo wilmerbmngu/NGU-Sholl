@@ -1,402 +1,12 @@
 <!DOCTYPE html><html lang="es"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Never Give Up</title>
+  <title>NGU Scoll</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }body {
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-  color: #333;
-  transition: background 0.3s, color 0.3s;
-}
-
-body.dark {
-  background: #121212;
-  color: #fff;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  flex-wrap: wrap;
-}
-@media (min-width: 1600px) {
-  .contenedor {
-    max-width: 1400px;
-    padding:3rem;}
-}
-.logo {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: green;
-  display: flex;
-  align-items: center;
-  gap:0.5rem;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #2e7d32;
-}
-
-.btn-group button {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  border: 2px solid #2e7d32;
-}
-
-.btn-primary {
-  background: #2e7d32;
-  color: #fff;
-}
-.btn-secondary {
-  border: 2px solid #22c55e;
-  color: #22c55e;
-  background-color: transparent;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.btn-secondary:hover {
-  background-color: #22c55e;
-  color: white;
-}
-
-.btn-secondary:active {
-  background-color: transparent;
-  color: #22c55e;
-  border-color: #22c55e;
-}
-
-.btn-outline {
-  background: transparent;
-  color: #2e7d32;
-}
-/* Contenedor principal con flex en pantallas grandes */
-/* Contenedor principal con flex en pantallas grandes */
-.hero-content {
-  display: flex;
-  flex-direction: column; /* por defecto, columnas (móvil) */
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem; /* Añadir padding para que el contenido no toque los bordes */
-}
-
-/* Texto dentro del contenedor */
-.hero-text {
-  padding-bottom: 20px; /* Espacio entre el texto y la imagen en móvil */
-}
-
-.hero-text h1 {
-  font-size: 2rem; /* Puedes ajustar el tamaño si quieres */
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Imagen dentro del contenedor */
-.hero-image {
-  display: flex; /* Para centrar la imagen dentro de su contenedor */
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0; /* Evita que la imagen se "achique" demasiado */
-}
-
-.hero-image img {
-  max-width: 100%; /* La imagen no será más ancha que su contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  width: 300px; /* Tamaño por defecto para pantallas pequeñas */
-  display: block;
-  /* margin: 20px auto;  No necesario si flexbox lo maneja */
-}
-
-/* Pantallas más grandes: layout en fila */
-@media (min-width: 768px) {
-  .hero-content {
-    flex-direction: row; /* En pantallas grandes, se alinean en fila */
-    justify-content: space-between;
-    text-align: left;
-    padding: 4rem 2rem; /* Más padding en pantallas grandes */
-  }
-
-  .hero-text {
-    flex: 1; /* El texto ocupa el espacio restante */
-    padding-right: 40px; /* Espacio entre el texto y la imagen */
-    padding-bottom: 0; /* Quitar padding inferior en desktop */
-  }
-
-  .hero-image {
-    flex: 1; /* La imagen también ocupa espacio */
-    justify-content: flex-end; /* Alinea la imagen a la derecha del contenedor */
-  }
-
-  .hero-image img {
-    width: 100%; /* La imagen ocupa el 100% de su contenedor flex-item */
-    max-width: 450px; /* Define un tamaño máximo para que no sea GIGANTE en pantallas muy grandes */
-    /* margin: 0; No necesario */
-  }
-}
-
-/* Animación de hover para la imagen (opcional) */
-.hero-image img:hover {
-  transform: scale(1.03);
-}
-
-/* Estilo para los botones dentro de hero-text */
-.hero-text .btn-group {
-  margin-top: 1.5rem; /* Espacio entre el párrafo y los botones */
-  display: flex; /* Para que los botones se alineen en fila */
-  justify-content: center; /* Centrar botones en móvil */
-  gap: 1rem; /* Espacio entre los botones */
-}
-
-@media (min-width: 768px) {
-  .hero-text .btn-group {
-    justify-content: flex-start; /* Alinear botones a la izquierda en desktop */
-  }
-}
-
-.hero-container {
-  display: flex;
-  justify-content: center;
-}
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  animation: fadeInUp 1s ease;
-}
-
-.hero h1 {
-  font-size: 2rem;
-  font-weight: 700;
-/* Para pantallas grandes */
-@media (min-width: 768px) {
-  .hero-text h1 {
-    font-size: 3rem; /* O 3.5rem, lo que consideres adecuado */
-  }
-  .hero-text p {
-    font-size: 1.15rem; /* Ligeramente más grande para desktop */
-  }
-  /* Asegúrate que el padding del hero-content sea el adecuado para el texto */
-  .hero-content {
-    padding: 6rem 0; /* Más espacio vertical dentro del hero section, si es necesario */
-  }
-}
-}
-.hero p {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-.hero .btn-group {
-  margin-top: 2rem;
-}
-
-.section {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.card {
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-body.dark .card {
-  background: #1e1e1e;
-}
-
-footer {
-  padding: 2rem;
-  background: #333;
-  color: #fff;
-  text-align: center;
-}
-
-body.dark footer {
-  background: #000;
-}
-
-.testimonios {
-  background: #fafafa;
-  padding: 2rem;
-}
-
-body.dark .testimonios {
-  background: #1c1c1c;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    display: none;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  body.dark nav {
-    background: #1c1c1c;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-/* Quita subrayado por defecto */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Botón base */
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Botón principal */
-.btn-primary {
-  background-color: #22c55e;
-  color: white;
-}
-
-/* Botón secundario con borde */
-.btn-secondary {
-  border: 2px solid #22c55e;
-  color: #22c55e;
-  background: transparent;
-}
-
-.btn-primary:hover {
-  background-color: #16a34a;
-}
-
-.btn-secondary:hover {
-  background-color: #22c55e;
- color:white;
-}
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .contenedor {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    padding: 4rem;
-  }
-
-  .texto, .imagen {
-    width:48%;
-}
-}
-/* Agrega esto al final de tus estilos CSS o donde consideres que va bien */
-
-.main-container {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 20px; 
-}
-
-@media (min-width: 1200px) {
-  .main-container {
-    padding: 0; 
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-content {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .hero-text {
-    flex: 1;
-    padding-right: 40px;
-  }
-
-  .hero-image {
-    flex: 1;
-    justify-content: flex-end;
-  }
-
-  .hero-image img {
-    width: 100%;
-    max-width: 450px;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -408,16 +18,14 @@ a {
         <a href="#inicio">Inicio</a>
         <a href="#cursos">Cursos</a>
         <a href="#metodo">Método</a>
-        <a href="#blog">Blog</a>
       </nav>
       <div class="btn-group">
-        <button class="btn-primary">Empieza Gratis</button>
+        <a href="nivelactual.html" class="btn-primary">Empieza Gratis</a>
         <button class="btn-outline" onclick="toggleModo()" id="modo-btn">
           <i class="fas fa-sun"></i> Modo claro
         </button>
       </div>
     </header>
-
     <div class="main-container">
       <section class="hero-content">
         <div class="hero-text">
@@ -427,7 +35,7 @@ a {
             ni dudas. ¡Es tu momento!
           </p>
           <div class="btn-group">
-            <a href="#" class="btn btn-primary">Empieza Gratis</a>
+            <a href="nivelactual.html" class="btn btn-primary">Empieza Gratis</a>
             <a href="#" class="btn btn-secondary">Ver cómo funciona</a>
           </div>
         </div>
@@ -462,25 +70,37 @@ a {
         <p><strong>Ana. B:</strong> "Esta bien👍."</p>
       </div>
       <div class="card">
-        <p><strong>Diego:</strong> "Me gusta Mari."</p>
+        <p><strong>Diego T:</strong> "Me gusta Mari."</p>
       </div>
       <div class="card">
-        <p><strong>Sumi:</strong> "Aprender ingles es beneficioso."</p>
+        <p><strong>Sunmi S:</strong> "Aprender ingles es beneficioso."</p>
       </div>
     </div>
   </section>  <footer>
     <p>© 2025 Never Give Up. Todos los derechos reservados. | <a href="#" style="color:#4fc3f7; text-decoration: underline;">Política de privacidad</a></p>
   </footer>  <script>
-    function toggleModo() {
-      document.body.classList.toggle('dark');
-      const btn = document.getElementById('modo-btn');
-      if (document.body.classList.contains('dark')) {
-        btn.innerHTML = '<i class="fas fa-moon"></i> Modo oscuro';
-      } else {
-        btn.innerHTML = '<i class="fas fa-sun"></i> Modo claro';
-      }
-    }
+ function toggleModo() {
+    document.body.classList.toggle('dark');
 
+    const btn = document.getElementById('modo-btn'); 
+    const icon = btn.querySelector('i'); 
+    const textNode = btn.lastChild;
+
+    if (document.body.classList.contains('dark')) {
+        icon.classList.remove('fa-sun'); 
+        icon.classList.add('fa-moon');  
+        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+            textNode.nodeValue = ' Modo oscuro';
+        }
+    } else {
+        
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+            textNode.nodeValue = ' Modo claro';
+        }
+    }
+}
     function toggleMenu() {
       const nav = document.getElementById('nav');
       nav.classList.toggle('active');
