@@ -1,108 +1,92 @@
-<!DOCTYPE html><html lang="es"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NGU Scoll</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Never Give Up School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-     <div class="logo">Never Give Up</div>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <nav id="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#metodo">Método</a>
-      </nav>
-      <div class="btn-group">
-        <a href="nivelactual.html" class="btn-primary">Empieza Gratis</a>
-        <button class="btn-outline" onclick="toggleModo()" id="modo-btn">
-          <i class="fas fa-sun"></i> Modo claro
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
         </button>
-      </div>
-    </header>
-    <div class="main-container">
-      <section class="hero-content">
-        <div class="hero-text">
-          <h1>Aprende inglés de forma fluida y natural</h1>
-          <p>
-            Con nuestro método práctico y dinámico, hablarás inglés sin miedo
-            ni dudas. ¡Es tu momento!
-          </p>
-          <div class="btn-group">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nivelactual.html">Cursos</a></li>
+                <li><a href="nivelactual.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
             <a href="nivelactual.html" class="btn btn-primary">Empieza Gratis</a>
-            <a href="#" class="btn btn-secondary">Ver cómo funciona</a>
-          </div>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i> Modo claro
+            </button>
         </div>
-        <div class="hero-image">
-          <img src="prosor-raton.jpg" alt="prosor-rata" />
-        </div>
-      </section>
+    </header>
 
-      <section class="section" id="metodo">
-        <h2>¿Cómo funciona?</h2>
-        <div class="cards">
-          </div>
-      </section>
-    <div class="cards">
-      <div class="card">
-        <h3>📚 Mini-lecciones</h3>
-        <p>Aprende con lecciones diarias y ejercicios prácticos.</p>
-      </div>
-      <div class="card">
-        <h3>🧠 Práctica</h3>
-        <p>Te enseñamos a pronunciar bien las palabras.</p>
-      </div>
-      <div class="card">
-        <h3>📊 Progreso claro</h3>
-        <p>Mide tu nivel y mejora semana a semana.</p>
-      </div>
-    </div>
-  </section>  <section class="section testimonios" id="testimonios">
-    <h2>Lo que dicen nuestros estudiantes</h2>
-    <div class="cards">
-      <div class="card">
-        <p><strong>Ana. B:</strong> "Esta bien👍."</p>
-      </div>
-      <div class="card">
-        <p><strong>Diego T:</strong> "Me gusta Mari."</p>
-      </div>
-      <div class="card">
-        <p><strong>Sunmi S:</strong> "Aprender ingles es beneficioso."</p>
-      </div>
-    </div>
-  </section>  <footer>
-    <p>© 2025 Never Give Up. Todos los derechos reservados. | <a href="#" style="color:#4fc3f7; text-decoration: underline;">Política de privacidad</a></p>
-  </footer>  <script>
- function toggleModo() {
-    document.body.classList.toggle('dark');
+    <main class="main-container">
+        <section class="hero-content">
+            <div class="hero-text">
+                <h1>Aprende inglés de forma fluida y natural</h1>
+                <p>
+                    Con nuestro método práctico y dinámico, hablarás inglés sin miedo
+                    ni dudas. ¡Es tu momento!
+                </p>
+                <div class="btn-group">
+                    <a href="nivelactual.html" class="btn btn-primary">Empieza Gratis</a>
+                    <a href="#" class="btn btn-secondary">Ver cómo funciona</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="prosor-raton.jpg" alt="Profesor ratón" />
+            </div>
+        </section>
 
-    const btn = document.getElementById('modo-btn'); 
-    const icon = btn.querySelector('i'); 
-    const textNode = btn.lastChild;
+        <section class="section" id="metodo">
+            <h2>¿Cómo funciona?</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>📚 Mini-lecciones</h3>
+                    <p>Aprende con lecciones diarias y ejercicios prácticos.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 Práctica</h3>
+                    <p>Te enseñamos a pronunciar bien las palabras.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Progreso claro</h3>
+                    <p>Mide tu nivel y mejora semana a semana.</p>
+                </div>
+            </div>
+        </section>
 
-    if (document.body.classList.contains('dark')) {
-        icon.classList.remove('fa-sun'); 
-        icon.classList.add('fa-moon');  
-        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
-            textNode.nodeValue = ' Modo oscuro';
-        }
-    } else {
-        
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
-            textNode.nodeValue = ' Modo claro';
-        }
-    }
-}
-    function toggleMenu() {
-      const nav = document.getElementById('nav');
-      nav.classList.toggle('active');
-    }
-  </script></body></html>
+        <section class="section testimonios" id="testimonios">
+            <h2>Lo que dicen nuestros estudiantes</h2>
+            <div class="cards">
+                <div class="card">
+                    <p><strong>Ana. B:</strong> "Esta bien👍."</p>
+                </div>
+                <div class="card">
+                    <p><strong>Diego T:</strong> "Me gusta Mari."</p>
+                </div>
+                <div class="card">
+                    <p><strong>Sunmi S:</strong> "Aprender ingles es beneficioso."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados. | <a href="#" style="color:#4fc3f7; text-decoration: underline;">Política de privacidad</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
