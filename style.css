@@ -57,6 +57,10 @@ header {
     background-color: #f0f0f0; 
     color: #333; 
     transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid transparent; /* Añade esta línea */
 }
 .logo {
     font-family: 'Poppins', sans-serif;
@@ -76,6 +80,9 @@ nav {
     display: flex;
     align-items: center;
     gap: 1.5rem; 
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 nav ul {
     display: flex; 
@@ -83,12 +90,13 @@ nav ul {
     margin: 0;
     padding: 0;
     gap: 1.5rem; 
+    border: none;
 }
 nav a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s;
-}
+}  
 nav a:hover {
     color: #2e7d32;
 }
@@ -135,6 +143,7 @@ header .btn-group .btn {
     background: transparent;
     color: #22c55e;
     border: 2px solid #22c55e;
+    width: 150px;
 }
 .btn-outline:hover {
     background-color: #0ada26;
@@ -297,7 +306,6 @@ header .btn-group .btn {
     padding: 0 1rem 1rem;
 }
 
-/* --- Estilos para móviles --- */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -317,7 +325,6 @@ header .btn-group .btn {
     }
 }
 
-/* --- Media Queries y Estilos de Modo Oscuro --- */
 @media (min-width: 768px) {
     .hero-content {
         flex-direction: row;
@@ -371,59 +378,180 @@ header .btn-group .btn {
         padding: 0;
     }
 }
-
+/* --- Estilos de Modo Oscuro --- */
 body.dark {
-    background-color: #131313;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #131313 ;
+    color: white ;
+    transition: background-color 0.3s ease, color 0.3s ease ;
 }
 body.dark header {
-    background-color: #131313;
+    background-color: #1c1c1c;
     color: white;
-}
-body.dark footer {
-    background-color: #131313;
-    color: white;
-}
-body.dark .section,
-body.dark .section.testimonios {
-    background-color: #131313;
-    color: white;
-}
-body.dark .card {
-    background-color: #222;
-    color: white;
+    border: none;
+    box-shadow: none;
     transition: background-color 0.3s ease;
 }
-body.dark .aprender-page-content h1 {
-    color: #ab47bc;
-}
-body.dark .tema-card {
-    background-color: #222;
-    border-color: #444;
-    color: white;
-}
-body.dark .tema-card:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
-    border-color: #ab47bc;
-}
 body.dark nav {
-    background: #1c1c1c;
-}
-body.dark .logo {
-    color: white;
+    background-color: transparent;
+    border: none;
 }
 body.dark nav a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 body.dark nav a:hover {
-    color: #ab47bc;
+    color: #22c55e;
 }
-body.dark .btn-outline i.fas.fa-moon {
+body.dark .logo {
+    color: white;
+}
+body.dark .menu-toggle i {
     color: white;
 }
 body.dark .btn-outline {
     color: white;
     border-color: white;
+    width: 150px;
+}
+body.dark .btn-outline i.fas.fa-moon {
+    color: white ;
+}
+body.dark footer {
+    background-color: #131313 ;
+    color: white ;
+    border: none ;
+    box-shadow: none ;
+}
+body.dark .section {
+    background-color: #191919;
+    color: white;
+    border: none; /* Asegúrate de que esta línea esté presente y sin !important */
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+body.dark .section,
+body.dark .section.testimonios {
+    background-color: #131313   ;
+    color: white ;
+    border: none ;
+    box-shadow: none ;
+    transition: background-color 0.3s ease,
+}   
+body.dark .card {
+    background-color: #222;
+    color: white;
+    transition: background-color 0.3s ease; 
+}
+body.dark .tema-card {
+    background-color: #222;
+    border-color: #444;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+body.dark .tema-card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1) ;
+    border-color: #ab47bc ;
+}
+body.dark .main-container {
+    background-color: #131313;
+    transition: background-color 0.3s ease;
+}
+/* --- Estilos del Acordeón --- */
+/* Diseño Base y Común */
+.acordeon {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.acordeon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.acordeon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+    color: #333;
+}
+.acordeon-titulo {
+    font-size: 1.25rem;
+    margin: 0;
+}
+.acordeon-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.acordeon-toggle i {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+.acordeon-contenido {
+    display: none;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+.acordeon.activo .acordeon-contenido {
+    display: block;
+}
+.acordeon.activo .acordeon-toggle i {
+    transform: rotate(180deg);
+}
+
+/* Colores por Etapa (Modo Claro) */
+.acordeon.etapa-1 .acordeon-header {
+    background-color: #E8F5E9;
+    color: #333;
+}
+.acordeon.etapa-2 .acordeon-header {
+    background-color: #E3F2FD;
+    color: #333;
+}
+.acordeon.etapa-3 .acordeon-header {
+    background-color: #FFEBEE;
+    color: #333;
+}
+
+/* --- Estilos de Modo Oscuro para el Acordeón --- */
+body.dark .acordeon {
+    background-color: #222;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+body.dark .acordeon:hover {
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+}
+body.dark .acordeon-header {
+    color: white;
+}
+body.dark .acordeon-toggle i {
+    color: white;
+}
+body.dark .acordeon-contenido {
+    background-color: #222;
+    color: white;
+}
+/* Colores de Etapa en Modo Oscuro (Estas reglas son más específicas y anulan las anteriores) */
+/* Colores de Etapa en Modo Oscuro con Degradado */
+body.dark .acordeon.etapa-1 .acordeon-header {
+    background-image: linear-gradient(to right, #4CAF50, #222);
+    color: white;
+}
+body.dark .acordeon.etapa-2 .acordeon-header {
+    background-image: linear-gradient(to right, #2196F3, #222);
+    color: white;
+}
+body.dark .acordeon.etapa-3 .acordeon-header {
+    background-image: linear-gradient(to right, #F44336, #222);
+    color: white;
 }

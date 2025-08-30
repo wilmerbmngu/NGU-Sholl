@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etapas - Never Give Up School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cursos-page">
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="metodo.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="cursos.html" class="btn btn-primary">Empieza Gratis</a>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i> Modo claro
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="section">
+            <h1 style="text-align: center;">¿En qué etapa estás?</h1>
+            <div class="acordeon-container">
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon etapa-1">Etapa 1 - 1/20</h2>
+                        <button class="acordeon-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <p>En esta etapa aprenderás a leer y pronunciar los números del 1 hasta el 20, además de hacer las combinaciones correctas.</p>
+                    </div>
+                </div>
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon etapa-2">Etapa 2 - 21/100</h2>
+                        <button class="acordeon-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <p>En esta etapa consolidarás los números del 21 hasta el 100, para lograr una mayor fluidez en la lectura.</p>
+                    </div>
+                </div>
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon etapa-3">Etapa 3 - 100/1M</h2>
+                        <button class="acordeon-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <p>En esta etapa aprenderás los números del 100 hasta 1 millón, para hablar y entender cantidades grandes de forma natural.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados. | <a href="#" style="color:#4fc3f7; text-decoration: underline;">Política de privacidad</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
