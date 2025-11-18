@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
+
     background-color: white;
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease; 
@@ -541,17 +542,20 @@ body.dark .acordeon-contenido {
     background-color: #222;
     color: white;
 }
-/* Colores de Etapa en Modo Oscuro (Estas reglas son más específicas y anulan las anteriores) */
+
 /* Colores de Etapa en Modo Oscuro con Degradado */
 body.dark .acordeon.etapa-1 .acordeon-header {
-    background-image: linear-gradient(to right, #4CAF50, #222);
-    color: white;
+    background-image: linear-gradient(to right, #4CAF50, #1c1c1c) !important; /* Verde a oscuro */
+    background-color: transparent !important; /* Asegura que no haya color sólido debajo */
+    color: white !important;
 }
 body.dark .acordeon.etapa-2 .acordeon-header {
-    background-image: linear-gradient(to right, #2196F3, #222);
-    color: white;
+    background-image: linear-gradient(to right, #2196F3, #1c1c1c) !important; /* Azul a oscuro */
+    background-color: transparent !important;
+    color: white !important;
 }
 body.dark .acordeon.etapa-3 .acordeon-header {
-    background-image: linear-gradient(to right, #F44336, #222);
-    color: white;
+    background-image: linear-gradient(to right, #F44336, #1c1c1c) !important; /* Rojo a oscuro */
+    background-color: transparent !important;
+    color: white !important;
 }
