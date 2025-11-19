@@ -526,20 +526,24 @@ body.dark .main-container {
 
 /* --- Estilos de Modo Oscuro para el Acordeón --- */
 body.dark .acordeon {
-    background-color: #222;
+    /* El fondo del acordeón debe ser transparente para que se vea el fondo de la página */
+    background-color: transparent; 
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 body.dark .acordeon:hover {
     box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
 }
 body.dark .acordeon-header {
+    /* Aquí se le da un color oscuro base a todos los headers */
+    background-color: #222; 
     color: white;
 }
 body.dark .acordeon-toggle i {
     color: white;
 }
 body.dark .acordeon-contenido {
-    background-color: #222;
+    /* El contenido sigue siendo oscuro */
+    background-color: #222; 
     color: white;
 }
 
