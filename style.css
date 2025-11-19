@@ -563,3 +563,200 @@ body.dark .acordeon.etapa-3 .acordeon-header {
     background-color: transparent !important;
     color: white !important;
 }
+/* --- Estilos para las Lecciones (Tarjetas de Números) --- */
+.titulo-leccion {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.subtitulo-leccion {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* La Cuadrícula (Grid) */
+.grid-numeros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Se adapta automático */
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* La Tarjeta Individual */
+.card-numero {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-numero:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+/* Elementos dentro de la tarjeta */
+.digito {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4CAF50; /* Color verde principal */
+    margin-bottom: 0.2rem;
+}
+.ingles {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+.pronunciacion {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+.btn-audio {
+    background: #E8F5E9;
+    border: none;
+    color: #4CAF50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+.btn-audio:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Nota Especial (El cuadro del 11 y 12) */
+.nota-especial {
+    background-color: #FFF3E0; /* Un naranja muy clarito */
+    border-left: 5px solid #FF9800;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+.nota-especial h4 {
+    color: #E65100;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Ajustes para Modo Oscuro (Lecciones) --- */
+body.dark .titulo-leccion {
+    color: #4CAF50; /* Se mantiene verde brillante */
+}
+body.dark .subtitulo-leccion {
+    color: #bbb;
+}
+body.dark .card-numero {
+    background-color: #333;
+    border-color: #444;
+}
+body.dark .card-numero:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+body.dark .ingles {
+    color: white;
+}
+body.dark .pronunciacion {
+    color: #aaa;
+}
+body.dark .btn-audio {
+    background: #444;
+    color: #4CAF50;
+}
+body.dark .btn-audio:hover {
+    background: #4CAF50;
+    color: white;
+}
+body.dark .nota-especial {
+    background-color: #2e2e2e;
+    border-left-color: #FF9800;
+    color: #ddd;
+}
+/* --- Estilos para la Sección "Poner a Prueba" --- */
+.seccion-prueba {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0fdf4; /* Un verde muy clarito de fondo */
+    border-radius: 16px;
+    border: 2px dashed #4CAF50; /* Borde punteado estilo "cuaderno" */
+}
+
+.mensaje-animo h3 {
+    color: #673AB7; /* Morado como en tu dibujo ("Bien!") */
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.mensaje-animo p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* El Botón Gigante */
+.btn-prueba {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px; /* Bordes muy redondos */
+    cursor: pointer;
+    margin-top: 1.5rem;
+    box-shadow: 0 5px 0 #2E7D32; /* Sombra sólida para efecto 3D */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-prueba:hover {
+    background-color: #43A047;
+    transform: translateY(-2px);
+}
+
+.btn-prueba:active {
+    transform: translateY(2px); /* Efecto de presionar */
+    box-shadow: 0 2px 0 #2E7D32;
+}
+
+/* El Gatito */
+.mascota-animo {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #673AB7; /* Morado */
+    animation: bounce 2s infinite; /* ¡El gato rebota! */
+}
+
+/* Animación del rebote del gato */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* Ajuste Modo Oscuro para la prueba */
+body.dark .seccion-prueba {
+    background-color: #222;
+    border-color: #4CAF50;
+}
+body.dark .mensaje-animo h3 {
+    color: #ab47bc; /* Morado claro */
+}
+body.dark .mensaje-animo p {
+    color: #ddd;
+}
