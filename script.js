@@ -58,3 +58,35 @@ function toggleModo() {
     // Guarda la preferencia en el almacenamiento local
     localStorage.setItem('modo-oscuro', isDarkMode);
 }
+/* --- Funcionalidad de Audio (Text-to-Speech) --- */
+
+// 1. Buscamos todos los botones de audio en la página
+const audioButtons = document.querySelectorAll('.btn-audio');
+
+// 2. A cada botón le agregamos una función cuando se le hace clic
+audioButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        
+        // A. Encontramos la palabra en inglés dentro de la misma tarjeta
+        // El botón está dentro de un div, buscamos el hermano que tiene la clase .ingles
+        const card = button.parentElement;
+        const textToSpeak = card.querySelector('.ingles').textContent;
+
+        // B. Preparamos la voz del navegador
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        
+        // C. Configuración (Idioma y Velocidad)
+        utterance.lang = 'en-US'; // Inglés de Estados Unidos
+        utterance.rate = 0.8;     // Un poquito más lento para que se entienda bien
+        utterance.pitch = 1;      // Tono normal
+
+        // D. ¡Habla!
+        window.speechSynthesis.speak(utterance);
+
+        // E. Pequeña animación visual (el botón se encoge un poco al pulsar)
+        button.style.transform = "scale(0.9)";
+        setTimeout(() => {
+            button.style.transform = "scale(1)";
+        }, 200);
+    });
+});
