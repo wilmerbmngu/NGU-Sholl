@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animales - Never Give Up School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cursos-page">
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="metodo.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="cursos.html" class="btn btn-primary">Empieza Gratis</a>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i> Modo claro
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="section">
+            <h1 style="text-align: center;">El Reino Animal 🐾</h1>
+            
+            <div class="acordeon-container">
+                
+                <div class="acordeon etapa-1">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Mascotas (Pets) 🏠</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐶</span>
+                                <span class="ingles">Dog</span>
+                                <span class="pronunciacion">/Dog/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐱</span>
+                                <span class="ingles">Cat</span>
+                                <span class="pronunciacion">/Cat/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐰</span>
+                                <span class="ingles">Rabbit</span>
+                                <span class="pronunciacion">/Rabit/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐹</span>
+                                <span class="ingles">Hamster</span>
+                                <span class="pronunciacion">/Jamster/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-2">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">La Granja (Farm Animals) 🚜</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐮</span>
+                                <span class="ingles">Cow</span>
+                                <span class="pronunciacion">/Cau/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐷</span>
+                                <span class="ingles">Pig</span>
+                                <span class="pronunciacion">/Pig/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐔</span>
+                                <span class="ingles">Chicken</span>
+                                <span class="pronunciacion">/Chiken/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐑</span>
+                                <span class="ingles">Sheep</span>
+                                <span class="pronunciacion">/Ship/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐴</span>
+                                <span class="ingles">Horse</span>
+                                <span class="pronunciacion">/Jors/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🦆</span>
+                                <span class="ingles">Duck</span>
+                                <span class="pronunciacion">/Dak/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-3">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Salvajes (Wild Animals) 🦁</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-animal">
+                                <span class="emoji-grande">🦁</span>
+                                <span class="ingles">Lion</span>
+                                <span class="pronunciacion">/Laion/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐯</span>
+                                <span class="ingles">Tiger</span>
+                                <span class="pronunciacion">/Taiger/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐘</span>
+                                <span class="ingles">Elephant</span>
+                                <span class="pronunciacion">/Elefant/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐒</span>
+                                <span class="ingles">Monkey</span>
+                                <span class="pronunciacion">/Monki/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🦒</span>
+                                <span class="ingles">Giraffe</span>
+                                <span class="pronunciacion">/Yiraf/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-animal">
+                                <span class="emoji-grande">🐊</span>
+                                <span class="ingles">Crocodile</span>
+                                <span class="pronunciacion">/Crocodail/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados. | <a href="#" style="color:#4fc3f7; text-decoration: underline;">Política de privacidad</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

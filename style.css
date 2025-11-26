@@ -760,3 +760,83 @@ body.dark .mensaje-animo h3 {
 body.dark .mensaje-animo p {
     color: #ddd;
 }
+/* --- Estilos para la Caja de Fórmula (Etapa 2) --- */
+.formula-box {
+    background-color: #E3F2FD; /* Azul clarito */
+    border: 2px dashed #2196F3;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.formula-box h4 {
+    color: #1565C0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.ecuacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Para que se ajuste en celular */
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.parte, .resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.num-ej { font-size: 1.5rem; font-weight: bold; color: #333; }
+.texto-ej { font-size: 0.9rem; color: #666; }
+.mas, .igual { font-size: 1.5rem; font-weight: bold; color: #2196F3; }
+.num-res { font-size: 1.8rem; font-weight: bold; color: #4CAF50; }
+.texto-res { font-size: 1.1rem; font-weight: bold; color: #4CAF50; }
+
+/* Modo Oscuro Fórmula */
+body.dark .formula-box {
+    background-color: #222;
+    border-color: #2196F3;
+}
+body.dark .formula-box h4 { color: #64B5F6; }
+body.dark .ecuacion { background-color: #333; }
+body.dark .num-ej { color: white; }
+body.dark .texto-ej { color: #aaa; }
+/* --- Estilos Específicos para Animales --- */
+.card-animal {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 16px; /* Bordes un poco más redondos */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: default;
+}
+
+.card-animal:hover {
+    transform: translateY(-5px);
+    border-color: #2196F3; /* Azul al pasar el mouse por animales */
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+}
+
+.emoji-grande {
+    font-size: 3.5rem; /* ¡Emojis gigantes! */
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+/* Modo Oscuro para Animales */
+body.dark .card-animal {
+    background-color: #333;
+    border-color: #444;
+}
+body.dark .card-animal:hover {
+    border-color: #2196F3;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
