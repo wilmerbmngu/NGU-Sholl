@@ -907,3 +907,85 @@ body.dark .card-objeto:hover {
     border-color: #FF5722;
     box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
 }
+/* --- Estilos para Saludos --- */
+.card-saludo {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative; /* Para el degradado de fondo sutil si quisieras */
+}
+
+.card-saludo:hover {
+    transform: translateY(-5px);
+    border-color: #9C27B0; /* Morado amigable */
+}
+
+.espanol-mini {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Colores de fondo sutiles para los horarios */
+.manana:hover { background-color: #fffde7; border-color: #FFEB3B; }
+.tarde:hover { background-color: #e3f2fd; border-color: #2196F3; }
+.noche:hover { background-color: #f3e5f5; border-color: #673AB7; }
+
+/* Estilo Chat para la Etapa 3 */
+.dialogo-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.pregunta { justify-content: flex-start; }
+.respuesta { justify-content: flex-end; }
+
+.avatar {
+    font-size: 2rem;
+}
+
+.burbuja {
+    padding: 1rem;
+    border-radius: 15px;
+    position: relative;
+    max-width: 80%;
+}
+
+.pregunta .burbuja {
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 0; /* Pico del globo */
+}
+.respuesta .burbuja {
+    background-color: #dcf8c6; /* Verde tipo WhatsApp */
+    border-bottom-right-radius: 0;
+}
+
+.pronunciacion-mini {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.btn-audio.mini {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Modo Oscuro Chat */
+body.dark .card-saludo { background-color: #333; border-color: #444; }
+body.dark .espanol-mini { color: #aaa; }
+body.dark .manana:hover { background-color: #333; border-color: #FFEB3B; }
+body.dark .pregunta .burbuja { background-color: #444; color: white; }
+body.dark .respuesta .burbuja { background-color: #054d44; color: white; } /* Verde oscuro WhatsApp */
+body.dark .pronunciacion-mini { color: #bbb; }

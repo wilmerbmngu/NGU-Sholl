@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saludos - Never Give Up School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cursos-page">
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="metodo.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="cursos.html" class="btn btn-primary">Empieza Gratis</a>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i> Modo claro
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="section">
+            <h1 style="text-align: center;">Saludos y Despedidas 👋</h1>
+            
+            <div class="acordeon-container">
+                
+                <div class="acordeon etapa-1">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Lo Básico (The Basics) ✨</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-saludo">
+                                <span class="emoji-grande">👋</span>
+                                <span class="ingles">Hello</span>
+                                <span class="pronunciacion">/Jelou/</span>
+                                <span class="espanol-mini">Hola (Formal)</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-saludo">
+                                <span class="emoji-grande">✌️</span>
+                                <span class="ingles">Hi</span>
+                                <span class="pronunciacion">/Jai/</span>
+                                <span class="espanol-mini">Hola (Amigos)</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-saludo">
+                                <span class="emoji-grande">🚶</span>
+                                <span class="ingles">Goodbye</span>
+                                <span class="pronunciacion">/Gudbai/</span>
+                                <span class="espanol-mini">Adiós</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-saludo">
+                                <span class="emoji-grande">💨</span>
+                                <span class="ingles">Bye</span>
+                                <span class="pronunciacion">/Bai/</span>
+                                <span class="espanol-mini">Chau</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-2">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Horarios (Times of Day) ⏰</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-saludo manana">
+                                <span class="emoji-grande">🌅</span>
+                                <span class="ingles">Good Morning</span>
+                                <span class="pronunciacion">/Gud Morning/</span>
+                                <span class="espanol-mini">Buenos días</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-saludo tarde">
+                                <span class="emoji-grande">☀️</span>
+                                <span class="ingles">Good Afternoon</span>
+                                <span class="pronunciacion">/Gud Afternun/</span>
+                                <span class="espanol-mini">Buenas tardes</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-saludo noche">
+                                <span class="emoji-grande">🌙</span>
+                                <span class="ingles">Good Night</span>
+                                <span class="pronunciacion">/Gud Nait/</span>
+                                <span class="espanol-mini">Buenas noches</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-3">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Mini Conversación 💬</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="formula-box">
+                            <h4>🤝 Preguntar y Responder</h4>
+                            
+                            <div class="dialogo-box pregunta">
+                                <div class="avatar">😃</div>
+                                <div class="burbuja">
+                                    <p class="ingles">How are you?</p>
+                                    <p class="pronunciacion-mini">/Jau ar yu?/</p>
+                                    <button class="btn-audio mini"><i class="fas fa-volume-up"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="dialogo-box respuesta">
+                                <div class="burbuja">
+                                    <p class="ingles">I am fine, thanks!</p>
+                                    <p class="pronunciacion-mini">/Ai am fain, zanks!/</p>
+                                    <button class="btn-audio mini"><i class="fas fa-volume-up"></i></button>
+                                </div>
+                                <div class="avatar">😎</div>
+                            </div>
+                            
+                            <p style="margin-top:1rem; font-size: 0.9rem;">(Intenta practicar esto con un amigo)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
