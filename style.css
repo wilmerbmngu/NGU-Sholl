@@ -840,3 +840,70 @@ body.dark .card-animal:hover {
     border-color: #2196F3;
     box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
 }
+/* --- Estilos para la Página de Colores --- */
+.card-color {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card-color:hover {
+    transform: translateY(-5px);
+    border-color: #FFD700; /* Borde dorado al pasar el mouse */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.circulo-color {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Esto lo hace redondo */
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombrita para dar volumen */
+    border: 2px solid rgba(0,0,0,0.05); /* Borde sutil */
+}
+
+/* Ajustes Modo Oscuro para Colores */
+body.dark .card-color {
+    background-color: #333;
+    border-color: #444;
+}
+body.dark .card-color:hover {
+    border-color: #FFD700;
+}
+body.dark .circulo-color {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+} 
+/* --- Estilos para la Página de Objetos --- */
+.card-objeto {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-objeto:hover {
+    transform: translateY(-5px);
+    border-color: #FF5722; /* Naranja intenso */
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.2);
+}
+
+/* Modo Oscuro para Objetos */
+body.dark .card-objeto {
+    background-color: #333;
+    border-color: #444;
+}
+body.dark .card-objeto:hover {
+    border-color: #FF5722;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos - Never Give Up School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cursos-page">
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="metodo.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="cursos.html" class="btn btn-primary">Empieza Gratis</a>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i> Modo claro
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="section">
+            <h1 style="text-align: center;">Objetos Comunes 🎒</h1>
+            
+            <div class="acordeon-container">
+                
+                <div class="acordeon etapa-1">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">En la Escuela (School) ✏️</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-objeto">
+                                <span class="emoji-grande">📖</span>
+                                <span class="ingles">Book</span>
+                                <span class="pronunciacion">/Buk/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">🖊️</span>
+                                <span class="ingles">Pen</span>
+                                <span class="pronunciacion">/Pen/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">✏️</span>
+                                <span class="ingles">Pencil</span>
+                                <span class="pronunciacion">/Pensol/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">🧼</span>
+                                <span class="ingles">Eraser</span>
+                                <span class="pronunciacion">/Ireiser/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="formula-box" style="margin-top: 2rem;">
+                            <h4>💡 Tip Rápido: ¿Un o Una?</h4>
+                            <p>En inglés usamos "A" o "An" para decir "uno".</p>
+                            <ul style="text-align: left; display: inline-block; margin-top: 10px;">
+                                <li>👉 Usa <strong>A</strong> si la palabra empieza con consonante: <br><em>A Book, A Pen.</em></li>
+                                <li style="margin-top: 5px;">👉 Usa <strong>An</strong> si empieza con vocal (a,e,i,o,u): <br><em>An Eraser, An Apple.</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-2">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Tecnología (Tech) 💻</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-objeto">
+                                <span class="emoji-grande">💻</span>
+                                <span class="ingles">Computer</span>
+                                <span class="pronunciacion">/Compiuter/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">📱</span>
+                                <span class="ingles">Phone</span>
+                                <span class="pronunciacion">/Foun/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">🖱️</span>
+                                <span class="ingles">Mouse</span>
+                                <span class="pronunciacion">/Maus/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">⌨️</span>
+                                <span class="ingles">Keyboard</span>
+                                <span class="pronunciacion">/Kibord/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-3">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Cosas Personales 👓</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-objeto">
+                                <span class="emoji-grande">🎒</span>
+                                <span class="ingles">Backpack</span>
+                                <span class="pronunciacion">/Bak-pak/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">👓</span>
+                                <span class="ingles">Glasses</span>
+                                <span class="pronunciacion">/Glases/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">⌚</span>
+                                <span class="ingles">Watch</span>
+                                <span class="pronunciacion">/Wotch/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-objeto">
+                                <span class="emoji-grande">🔑</span>
+                                <span class="ingles">Key</span>
+                                <span class="pronunciacion">/Ki/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

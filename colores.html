@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colores - Never Give Up School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cursos-page">
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="metodo.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="cursos.html" class="btn btn-primary">Empieza Gratis</a>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i> Modo claro
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="section">
+            <h1 style="text-align: center;">Los Colores / Colors 🎨</h1>
+            
+            <div class="acordeon-container">
+                
+                <div class="acordeon etapa-1">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">El Arcoíris (Rainbow) 🌈</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #FF0000;"></div>
+                                <span class="ingles">Red</span>
+                                <span class="pronunciacion">/Red/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #0000FF;"></div>
+                                <span class="ingles">Blue</span>
+                                <span class="pronunciacion">/Blu/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #FFD700;"></div>
+                                <span class="ingles">Yellow</span>
+                                <span class="pronunciacion">/Yelou/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #008000;"></div>
+                                <span class="ingles">Green</span>
+                                <span class="pronunciacion">/Grin/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #FFA500;"></div>
+                                <span class="ingles">Orange</span>
+                                <span class="pronunciacion">/Oranch/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #800080;"></div>
+                                <span class="ingles">Purple</span>
+                                <span class="pronunciacion">/Perpol/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-2">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Neutros y Más 🐼</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="grid-numeros">
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #000000;"></div>
+                                <span class="ingles">Black</span>
+                                <span class="pronunciacion">/Blac/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #FFFFFF; border: 1px solid #ddd;"></div>
+                                <span class="ingles">White</span>
+                                <span class="pronunciacion">/Wait/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #808080;"></div>
+                                <span class="ingles">Gray</span>
+                                <span class="pronunciacion">/Grei/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #FFC0CB;"></div>
+                                <span class="ingles">Pink</span>
+                                <span class="pronunciacion">/Pink/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                            <div class="card-color">
+                                <div class="circulo-color" style="background-color: #8B4513;"></div>
+                                <span class="ingles">Brown</span>
+                                <span class="pronunciacion">/Braun/</span>
+                                <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acordeon etapa-3">
+                    <div class="acordeon-header">
+                        <h2 class="acordeon-titulo">Truco: Claro y Oscuro 💡</h2>
+                        <button class="acordeon-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="acordeon-contenido">
+                        <div class="formula-box">
+                            <h4>🎨 Crea tus propios colores</h4>
+                            <p>No necesitas memorizar todo. Solo usa estas palabras mágicas antes del color:</p>
+                            
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li style="margin-bottom: 0.5rem;">☀️ <strong>Light</strong> (Lait) = Claro</li>
+                                <li>🌑 <strong>Dark</strong> (Dark) = Oscuro</li>
+                            </ul>
+
+                            <div class="grid-numeros" style="margin-top: 1rem;">
+                                <div class="card-color">
+                                    <div class="circulo-color" style="background-color: #87CEEB;"></div>
+                                    <span class="ingles">Light Blue</span>
+                                    <span class="pronunciacion">/Lait Blu/</span>
+                                    <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                                </div>
+                                <div class="card-color">
+                                    <div class="circulo-color" style="background-color: #0000FF;"></div>
+                                    <span class="ingles">Blue</span>
+                                    <span class="pronunciacion">/Blu/</span>
+                                    <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                                </div>
+                                <div class="card-color">
+                                    <div class="circulo-color" style="background-color: #00008B;"></div>
+                                    <span class="ingles">Dark Blue</span>
+                                    <span class="pronunciacion">/Dark Blu/</span>
+                                    <button class="btn-audio"><i class="fas fa-volume-up"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
