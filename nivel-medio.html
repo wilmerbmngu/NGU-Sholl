@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivel Medio - Never Give Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cursos-page">
+    <header>
+        <div class="logo">Never Give Up</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nivelactual.html">Niveles</a></li>
+                <li><a href="metodo.html">Método</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="nivelactual.html" class="btn btn-primary">Cambiar Nivel</a>
+            <button class="btn btn-outline" onclick="toggleModo()" id="modo-btn">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="section">
+            <h1 style="text-align: center;">Nivel Medio 🚀</h1>
+            <p style="text-align: center; margin-bottom: 2rem;">¡Hora de la acción! Aquí aprenderás a formar frases.</p>
+            
+            <div class="grid-cursos">
+                
+                <a href="verbos.html" class="tema-card">
+                    <div class="icono-tema">🏃</div>
+                    <h3>Acciones (Verbs)</h3>
+                    <p>Correr, saltar, comer, dormir...</p>
+                </a>
+
+                <div class="tema-card bloqueado" style="opacity: 0.6; cursor: not-allowed; filter: grayscale(1);">
+                    <div class="icono-tema">🔒</div>
+                    <h3>Próximamente...</h3>
+                    <p>Pronombres y Familia</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="nivelactual.html" class="btn btn-outline">⬅ Volver a los Niveles</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Never Give Up. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

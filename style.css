@@ -989,3 +989,82 @@ body.dark .manana:hover { background-color: #333; border-color: #FFEB3B; }
 body.dark .pregunta .burbuja { background-color: #444; color: white; }
 body.dark .respuesta .burbuja { background-color: #054d44; color: white; } /* Verde oscuro WhatsApp */
 body.dark .pronunciacion-mini { color: #bbb; }
+/* --- Estilos para Verbos (Nivel Medio) --- */
+.card-verbo {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card-verbo:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50; /* Verde Acción */
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+}
+
+/* Estilo especial para las tarjetas de frases */
+.card-verbo.frase {
+    border-style: dashed; /* Borde punteado para diferenciar frases */
+    background-color: #f9fff9;
+}
+
+/* Modo Oscuro Verbos */
+body.dark .card-verbo {
+    background-color: #333;
+    border-color: #444;
+}
+body.dark .card-verbo:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+body.dark .card-verbo.frase {
+    background-color: #2e3b2f;
+}
+/* --- Nuevos estilos para Info Extra --- */
+.tip-box, .warning-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 8px solid;
+    margin: 1.5rem 0;
+    text-align: left;
+    /* Forzamos el color del texto a uno oscuro para que sea legible */
+    color: #1a1a1a !important; 
+}
+
+.tip-box h4, .warning-box h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.vocabulario-extra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.tag {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+body.dark .tag {
+    background: #1a237e;
+    color: #90caf9;
+}
+
+body.dark .tip-box h4, body.dark .warning-box h4 {
+    color: #444; /* Para que resalte en el fondo claro de la caja */
+}
